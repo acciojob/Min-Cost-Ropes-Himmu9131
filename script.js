@@ -7,12 +7,13 @@ function mincost(arr)
 	while(arr.length>1){
 		let first=arr.shift();
 		let second=arr.shift();
-		minCost=first+second;
-		arr.push(minCost);
+		let sum=first+second;
+		minCost+=sum;
+		arr.push(sum);
 		arr.sort((a,b)=>a-b);
 		
 	}
-	
+	return minCost;
 }
 
 module.exports=mincost;
